@@ -1,5 +1,5 @@
 class Customer:
-    def __init__(self, name, email):
+    def __init__(self, name, email):#intializing the customer base
         self.name = name
         self.email = email
         self.purchases = []
@@ -8,7 +8,7 @@ class Customer:
         inventory_dict =inventory.inventory
         # self.inventory = inventory_dict
         # self.product = product
-        if product in inventory_dict:
+        if product in inventory_dict: #checking the customer branch and updating from the inventory
             if inventory_dict[product]>0:
                 self.purchases.append(product)
                 inventory_dict[product] -= 1
@@ -17,7 +17,7 @@ class Customer:
         else:
             print("we dont have product")
     
-    def print_purchases(self):
+    def print_purchases(self):#checking purchases
         for item in self.purchases:
             print(item)
 
@@ -45,7 +45,7 @@ class Inventory:
 
 
 
-customer_1= Customer("jji","jo@gmail.com")
+customer_1= Customer("jji","jo@gmail.com") #demorun
 product_1 = Product("cell",250)
 
 
